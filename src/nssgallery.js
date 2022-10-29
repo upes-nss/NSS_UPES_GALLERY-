@@ -3,7 +3,9 @@ const Data=[
         id:1,
         imageurl:"https://res.cloudinary.com/dbfyrrym6/image/upload/v1666694487/samples/plantationdrive/DSC_0168_kp39ao.jpg",
         category:"Plantation Drive",
-        des:'xyxzz',
+
+        des:'this is a Plantation Drive',
+        date:'12/x/2024',
 
     },
     {

@@ -52,7 +52,7 @@ max-height:500px;
 {
   padding: 30px;
 }
-/* img{
+ img{
   padding-top:25px;
   width:460px;
   height: 300px;
@@ -60,16 +60,16 @@ max-height:500px;
   padding-right: 10px;
   padding-left: 10px;
   color: black;
-} */
+} 
 
-.image-grid
+ .image-grid
 {
   /* display:contents;
 grid-template-columns: repeat(auto-fill,minmax(450px,1fr)); */
 display: grid;
 grid-template-columns: auto auto auto ;
 gap: 10px;
-background-color: #d9dee1;
+background-color: #000000;
 padding: 10px;
 }
 .logo
@@ -79,4 +79,13 @@ align-self: center;
 padding-inline: 700px;
 max-height: auto;
 
+} 
+img{
+  padding-top:25px;
+  width:460px;
+  height: 300px;
+  object-fit:cover;
+  padding-right: 10px;
+  padding-left: 10px;
+  color: black;
 }

@@ -1,62 +1,3 @@
-// import React from 'react';
-// import './App.css';
-// import nssgallery from './nssgallery';
-
-// function App() {
-//   // const[image]=useState(image.nssgallery);
-//   return (
-//     <div>
-//       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-//         <div className="container-fluid">
-//           <a className="navbar-brand" href="#">
-//             <img src='https://www.freelogovectors.net/wp-content/uploads/2020/02/nss-logo-national-service-scheme.png' height={40}>
-//             </img> NSS UPES GALLERY
-//           </a>
-//           <button
-//             className="navbar-toggler"
-//             type="button"
-//             data-bs-toggle="collapse"
-//             data-bs-target="#navbarNavAltMarkup"
-//             aria-controls="navbarNavAltMarkup"
-//             aria-expanded="false"
-//             aria-label="Toggle navigation"
-//           >
-//             <span className="navbar-toggler-icon" />
-//           </button>
-
-//           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-//             <div className="navbar-nav">
-//               <a className="nav-link active" aria-current="page" href="#">
-//                 ALL
-//               </a>
-//               <a className="nav-link active" aria-current="page" href="#">
-//                 Cleanliness Drive
-//               </a>
-//               <a className="nav-link active" aria-current="page" href="#">
-//                 Plantation Drive
-//               </a>
-//               <a className="nav-link active" aria-current="page" href="#">
-//                 Donation Drive
-//               </a>
-//               <a className="nav-link active" aria-current="page" href="#">
-//                 Cultural Event
-//               </a>
-//             </div>
-//           </div>
-//         </div>
-//       </nav>
-//       <img className="banner" src={"https://res.cloudinary.com/dbfyrrym6/image/upload/v1666695867/samples/tirangarally/DSC_0140-min_d5hp2m.jpg"} alt="BAenner" />
-//       <h1 className='title'> NSS UPES HAPPY MOMENTS </h1>
-//       <div className='image-grid'>
-//         {nssgallery.map((data) =><img src={data.imageurl} alt="BAenner"></img>)}
-
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default App
-
 import React,{useState} from 'react';
 import './App.css';
 import Data from './nssgallery';
@@ -89,7 +30,7 @@ setItems(updatedItems);
    </div>
     </div>
 
-<div className='menu-items contaier-fluid mt-5'>
+<div className='menu-items contaier mt-5'>
   <div className='row'>
     <div className='col -11 mx-auto'>
       <div className='row my-5'>
@@ -98,15 +39,15 @@ setItems(updatedItems);
 
             const{id,imageurl,category,des}=elem;
             return(
-              <div className='item1 col-12 col-md-6 col-lg-6 col-xl-4 my-5'>
+              <div className='item1 col-12 col-md-6 col-lg-6 col-xl-3 my-8'>
           <div className='row Item-inside'>
             {/*images*/}
-            <div className='col-12 col-md-12 col-lg-4 img-div'>
+            <div className='image-grid '>
 
-              <img src={imageurl} alt='pics' className='img-fluid'/>
+              <img src={imageurl} alt='pics' className='rounded mx-auto d-block img-thumbnail img-fluid'/>
 
             </div>
-            <div className='col-12 col-md-12 col-lg-8'>
+            <div className='col-12 col-md-12 col-lg-3'>
               <div className='main-title pt-4 p-3'>
                 <h2>{category}</h2>
                 <p>{des}</p>
@@ -127,6 +68,7 @@ setItems(updatedItems);
           </div>
          </div>
       </div>
+      
   </>
 )
 }
