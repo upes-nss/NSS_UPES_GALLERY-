@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import './App.css';
 import Data from './nssgallery';
+import { useMediaQuery } from 'react-responsive'
 const App = () => {
   const[items,setItems]=useState(Data);
   const filterItem=(categItem)=>{
@@ -31,16 +32,17 @@ setItems(updatedItems);
 
             const{id,imageurl,category,des}=elem;
             return(
-              <div className='image-grid '>
-
-              <img src={imageurl} alt='pics'/>
-
+            <div className='image-grid '>
+              <img src={imageurl} alt='pics' class="responsive"/>
+              
             </div>
             )})}
      </div>
       </>
     )
   }
+
+  
 
 export default App
 
