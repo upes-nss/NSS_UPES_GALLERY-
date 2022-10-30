@@ -59,7 +59,7 @@ max-height:500px;
   object-fit:cover;
   padding-right: 10px;
   padding-left: 10px;
-  color: black;
+  color: rgb(255, 255, 255);
 } 
 
  .image-grid
@@ -69,7 +69,7 @@ grid-template-columns: repeat(auto-fill,minmax(450px,1fr)); */
 display: grid;
 grid-template-columns: auto auto auto ;
 gap: 10px;
-background-color: #000000;
+background-color: #ffefef;
 padding: 10px;
 }
 .logo
