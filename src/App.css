@@ -71,7 +71,10 @@ grid-template-columns: auto auto auto ;
 gap: 10px;
 background-color: #ffefef;
 padding: 10px;
+
 }
+
+
 .logo
 {
   padding: auto;
@@ -81,11 +84,48 @@ max-height: auto;
 
 } 
 img{
-  padding-top:25px;
+  padding-top:25px; 
   width:460px;
   height: 300px;
-  object-fit:cover;
+  object-fit:cover; 
   padding-right: 10px;
-  padding-left: 10px;
-  color: black;
+  padding-left: 10px; 
+  color: black; 
+} 
+
+.responsive{
+  width: 100%;
+  height: auto;
 }
+
+.image-grid {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 100px 0;
+  background: rgba(227, 221, 221, 0.4);
+  color: rgb(0, 0, 0);
+  visibility: hidden;
+  opacity: 0;
+  font-size: large;
+  font-weight: bold;
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+
+
+.image-wrap:hover .content {
+  visibility: visible;
+  opacity: 1;
+  
+}
+
