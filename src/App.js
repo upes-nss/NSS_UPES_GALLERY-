@@ -30,10 +30,14 @@ setItems(updatedItems);
       {
           items.map((elem)=>{
 
-            const{id,imageurl,category,des}=elem;
+            const{id,imageurl,category,Description,date}=elem;
             return(
             <div className='image-grid '>
-              <img src={imageurl} alt='pics' class="responsive"/>
+              <div className='image-wrap'>
+                <img src={imageurl} alt='pics' class="responsive"/>
+                <p className='content'>{Description}</p>
+                
+              </div>
               
             </div>
             )})}
