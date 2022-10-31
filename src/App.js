@@ -1,13 +1,14 @@
 import React,{useState} from 'react';
 import './App.css';
 import Data from './nssgallery';
+// import { useMediaQuery } from 'react-responsive'
 const App = () => {
   const[items,setItems]=useState(Data);
   const filterItem=(categItem)=>{
 
     const updatedItems=Data.filter((curele)=>
     {
-      return curele.category ==categItem;
+      return curele.category ===categItem;
     });
 setItems(updatedItems);
 
@@ -29,18 +30,27 @@ setItems(updatedItems);
       {
           items.map((elem)=>{
 
-            const{id,imageurl,category,des}=elem;
+            const{id,imageurl,Description,Date,Tagline}=elem;
             return(
-              <div className='image-grid '>
-
-              <img src={imageurl} alt='pics'/>
-
+            <div className='image-grid '>
+              <div className='image-wrap'>
+                <img src={imageurl} alt='pics' class="responsive"/>
+                <p className='tag'>{Tagline}</p>
+                <p className='tag'>{Date}</p>
+                <p className='content'> {Description}</p>
+               
+                
+                
+              </div>
+              
             </div>
             )})}
      </div>
       </>
     )
   }
+
+  
 
 export default App
 
