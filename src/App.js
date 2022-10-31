@@ -8,7 +8,7 @@ const App = () => {
 
     const updatedItems=Data.filter((curele)=>
     {
-      return curele.category ===categItem;
+      return curele.category ==categItem;
     });
 setItems(updatedItems);
 
