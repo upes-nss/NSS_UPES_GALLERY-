@@ -8,29 +8,32 @@ const App = () => {
 
     const updatedItems=Data.filter((curele)=>
     {
-      return curele.category ==categItem;
+      return curele.category===categItem;
     });
 setItems(updatedItems);
 
   }
     return (
       <>
-      <h2 className='mt-5 text-center main-heading'>NSS UPES GALLERY</h2>
-      {/* <img src='https://www.freelogovectors.net/wp-content/uploads/2020/02/nss-logo-national-service-scheme.png' height={70} className='logo'></img> */}
+      <div className='header'>
+  
+      <h2 className='text-center main-heading'>NSS UPES GALLERY</h2>
+     
       <div className="menu-tabs container">
      <div className='menu-tab d-flex justify-content-around'>
-      <button className='btn btn-warning'onClick={()=>setItems(Data)}>ALL</button>
-      <button className=' btn btn-success ' onClick={()=>filterItem('Plantation Drive')}>Plantation Drive</button>
-      <button className='btn btn-warning' onClick={()=>filterItem('Cleanliness Drive')}>Cleanliness Drive</button>
-      <button className='btn btn-warning'onClick={()=>filterItem('Donation Drive')}>Donation Drive</button>
-      <button className='btn btn-success'onClick={()=>filterItem('Cultural Event')}>Cultural Events</button>
+      <button className='btn btn-light'onClick={()=>setItems(Data)}>ALL</button>
+      <button className=' btn btn-light ' onClick={()=>filterItem('Plantation Drive')}>Plantation Drive</button>
+      <button className='btn btn-light' onClick={()=>filterItem('Cleanliness Drive')}>Cleanliness Drive</button>
+      <button className='btn btn-light'onClick={()=>filterItem('Donation Drive')}>Donation Drive</button>
+      <button className='btn btn-light'onClick={()=>filterItem('Cultural Event')}>Cultural Events</button>
      </div>
+      </div>
       </div>
       <div className='image-grid'>
       {
           items.map((elem)=>{
 
-            const{id,imageurl,Description,Date,Tagline}=elem;
+            const{imageurl,Description,Date,Tagline}=elem;
             return(
             <div className='image-grid '>
               <div className='image-wrap'>
